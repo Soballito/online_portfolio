@@ -161,7 +161,7 @@ html.ns-has-cursor, html.ns-has-cursor * { cursor: none !important; }
 .ns-project { margin: 0; color: var(--ink); }
 .ns-project-frame { position: relative; display: block; width: 100%; overflow: hidden; background: var(--surface-dark); border-radius: var(--radius-md, 8px); will-change: transform; }
 .ns-project-cv { display: block; width: 100%; height: 100%; image-rendering: pixelated; transition: filter 400ms ease-out; filter: grayscale(1); }
-.ns-project.is-resolved .ns-project-cv { image-rendering: auto; filter: grayscale(0); }
+.ns-project.is-resolved .ns-project-cv, .ns-project-frame.is-resolved .ns-project-cv { image-rendering: auto; filter: grayscale(0); }
 .ns-project-tone { position: absolute; inset: 0; background: var(--duotone); mix-blend-mode: screen; transition: opacity 400ms ease-out; pointer-events: none; }
 .ns-project.is-resolved .ns-project-tone { opacity: 0; }
 .ns-project-cap { display: flex; gap: var(--space-2, 16px); margin-top: var(--space-1, 8px); text-transform: uppercase; }
@@ -1246,6 +1246,7 @@ function cursor(o) {
     });
   }
   function onDown(e) {
+    if (e.pointerType === 'touch') return;
     if (!(e.target && e.target.closest && e.target.closest(imgSel))) return;
     var og = origin(); burst(e.clientX - og.x, e.clientY - og.y);
   }
@@ -1626,9 +1627,11 @@ function initImages(root) {
   $$('canvas[data-src]', root).forEach(function (cv) {
     if (cv._pix) { cv._pix.render(); return; }
     var frame = cv.closest('.ns-project-frame'), fig = cv.closest('.ns-project') || frame;
-    var c = pixelImage(cv, { src: cv.getAttribute('data-src'), resolvedSrc: cv.getAttribute('data-resolved') || undefined, onLevel: function (l, r) { fig.classList.toggle('is-resolved', r); } });
+    var rv = $('canvas[data-reveal]', frame), full = cv.getAttribute('data-resolved') || (rv && rv.getAttribute('data-reveal'));
+    var c = pixelImage(cv, { src: cv.getAttribute('data-src'), resolvedSrc: full || undefined, onLevel: function (l, r) { fig.classList.toggle('is-resolved', r); } });
     cv._pix = c; frame._pix = c;
-    if (cv.hasAttribute('data-static')) return;
+    /* static images resolve only under the cursor square; on touch, where there is no square, a tap resolves them for good */
+    if (cv.hasAttribute('data-static')) { if (touch) frame.addEventListener('click', function () { c.resolve(); }); return; }
     if (touch && imgIO) { imgIO.observe(frame); frame.addEventListener('click', function () { frame._kept = true; c.resolve(); }); }
     else {
       frame.addEventListener('pointerenter', function (e) { if (e.pointerType !== 'touch') c.resolve(); });
