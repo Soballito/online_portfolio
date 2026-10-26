@@ -4,12 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<title>Nico Soballa</title>
-<meta name="description" content="Portfolio of Nico Soballa">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Roboto:wght@400;500&family=Roboto+Mono:wght@400;500&display=swap">
+<title>Nico Soballa – Mechanical Engineer &amp; Product Designer</title>
+<meta name="description" content="Portfolio of Nico Soballa, mechanical engineer, project manager and product designer from Dortmund.">
+<link rel="canonical" href="https://soballito.github.io/online_portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nico Soballa – Mechanical Engineer &amp; Product Designer">
+<meta property="og:description" content="Portfolio of Nico Soballa, mechanical engineer, project manager and product designer from Dortmund.">
+<meta property="og:url" content="https://soballito.github.io/online_portfolio/">
+<meta property="og:image" content="https://soballito.github.io/online_portfolio/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nico Soballa – Mechanical Engineer, Project Manager, Product Designer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nico Soballa – Mechanical Engineer &amp; Product Designer">
+<meta name="twitter:description" content="Portfolio of Nico Soballa, mechanical engineer, project manager and product designer from Dortmund.">
+<meta name="twitter:image" content="https://soballito.github.io/online_portfolio/og-image.png">
+<link rel="preload" href="fonts/pixelify-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+/* fonts: self-hosted (latin + latin-ext subsets, variable weight) */
+@font-face{font-family:'Pixelify Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/pixelify-sans-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Pixelify Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/pixelify-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/roboto-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/roboto-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/roboto-mono-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Roboto Mono';font-style:normal;font-weight:400 500;font-display:swap;src:url(fonts/roboto-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
 /* tokens: Nico Soballa design system */
 :root{--surface-100:#F4F4F4;--surface-200:#E8E8E8;--surface-dark:#0E0E10;--surface-dark-raised:#17171A;--ink:#0E0E10;--ink-muted:#5C5C62;--ink-on-dark:#FFFFFF;--ink-on-dark-muted:#A8A8AE;--hairline:#0e0e102e;--hairline-on-dark:#ffffff2e;--accent:#2A33E8;--on-accent:#FFFFFF;--focus:var(--accent);--surface-white:#FFFFFF;--ink-fixed:#0E0E10;--header-glass:#ffffffcc;--menu-glass:#e8e8e8e6;--scrim:#0e0e1099;--pixel-color:#FFFFFF;--cursor-square:#ffffff40;--duotone:#2A33E8;--charcoal:#1F1F1F;--pale-grey-green:#C9D3CF;--font-display:"Pixelify Sans", "Silkscreen", "Jersey 10", "Tiny5", monospace;--font-body:"Roboto", system-ui, sans-serif;--font-mono:"Roboto Mono", ui-monospace, monospace;--space-half:4px;--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--space-6:48px;--space-8:64px;--space-12:96px;--space-16:128px;--radius-none:0px;--radius-sm:4px;--radius-md:8px;--grid-columns:12;--grid-gutter:24px;--header-max:576px;--header-bar-height:48px;--header-inset:8px;--hairline-width:1px;--pixel-columns:12;--pixel-columns-mobile:6;--pixel-inset:32px;--pixel-dot:3px;--scramble-tick:40ms;--form-headline:800ms;--form-paragraph:1200ms;--form-line-stagger:120ms;--menu-entry-stagger:160ms;--cursor-wave:700ms;--reveal-step:110ms;--scramble-start:0.35;--pixel-opacity:0.3;--z-content:1;--z-menu-scrim:30;--z-menu:35;--z-pixels:40;--z-header:50;--z-cursor:100;}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--surface-100:#0E0E10;--surface-200:#17171A;--surface-dark:#0E0E10;--surface-dark-raised:#17171A;--ink:#F4F4F4;--ink-muted:#A1A1A8;--ink-on-dark:#FFFFFF;--ink-on-dark-muted:#A8A8AE;--hairline:#f4f4f42e;--hairline-on-dark:#ffffff2e;--accent:#8D93FF;--on-accent:#0E0E10;--focus:var(--accent);--surface-white:#FFFFFF;--ink-fixed:#0E0E10;--header-glass:#17171acc;--menu-glass:#17171ae6;--scrim:#00000099;--pixel-color:#FFFFFF;--cursor-square:#ffffff40;--duotone:#2A33E8;--charcoal:#1F1F1F;--pale-grey-green:#C9D3CF;color-scheme:dark}}
@@ -526,6 +544,11 @@ html.landing-on .trail-hint, html.pp-open .trail-hint, html.menu-open .trail-hin
 }
 @media (prefers-reduced-motion: reduce) { .trail-hint { transition: none; } .trail-hint .th-arrow { animation: none; } }
 #v-disclaimer { min-height: calc(100vh - 180px); }
+#v-impressum, #v-privacy { min-height: calc(100vh - 180px); }
+.prose > .legal-h { grid-column: 5 / span 7; max-width: 62ch; margin-top: var(--space-4); hyphens: auto; overflow-wrap: anywhere; }
+.prose > .legal-h:first-child { margin-top: 0; }
+.prose a { color: inherit; text-underline-offset: 3px; }
+@media (max-width: 1023px) { .prose > .legal-h { grid-column: 3 / -1; } }
 
 </style>
 <style>[hidden]{display:none!important}</style>
@@ -961,12 +984,65 @@ html.landing-on .trail-hint, html.pp-open .trail-hint, html.menu-open .trail-hin
     </div>
   </div>
 </section>
+<section class="view" id="v-impressum" aria-label="Impressum" hidden>
+  <div class="wrap hero">
+    <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Impressum</span></div>
+    <h1 class="display-96 hero-title" data-form>Impressum</h1>
+  </div>
+  <div class="wrap">
+    <div class="block">
+      <div class="g12 prose">
+        <h2 class="display-24 legal-h">Information according to § 5 DDG</h2>
+        <p class="body-16">Nico Soballa<br>Grüne Straße 2-8<br>44147 Dortmund<br>Germany</p>
+        <h2 class="display-24 legal-h">Contact</h2>
+        <p class="body-16">Email: <a href="mailto:info@soballa.de">info@soballa.de</a></p>
+        <h2 class="display-24 legal-h">Responsible for the content according to § 18 (2) MStV</h2>
+        <p class="body-16">Nico Soballa<br>Grüne Straße 2-8<br>44147 Dortmund<br>Germany</p>
+        <h2 class="display-24 legal-h">Consumer dispute resolution</h2>
+        <p class="body-16">I am neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board.</p>
+        <h2 class="display-24 legal-h">Liability for links</h2>
+        <p class="body-16">This website links to external websites (LinkedIn). I have no influence on their content, and the respective provider is responsible for it. If I become aware of any infringement, I will remove the link immediately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="view" id="v-privacy" aria-label="Privacy" hidden>
+  <div class="wrap hero">
+    <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Privacy</span></div>
+    <h1 class="display-96 hero-title" data-form>Privacy</h1>
+  </div>
+  <div class="wrap">
+    <div class="block">
+      <div class="g12 prose">
+        <h2 class="display-24 legal-h">Controller</h2>
+        <p class="body-16">Nico Soballa<br>Grüne Straße 2-8<br>44147 Dortmund<br>Germany</p>
+        <p class="body-16">Email: <a href="mailto:info@soballa.de">info@soballa.de</a></p>
+        <h2 class="display-24 legal-h">Overview</h2>
+        <p class="body-16">This website is a personal portfolio. It uses no cookies, no analytics, no tracking and no advertising, and it has no contact form. Fonts are hosted on this website itself, so no data is sent to font providers.</p>
+        <h2 class="display-24 legal-h">Hosting and server logs</h2>
+        <p class="body-16">This website is hosted on GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.</p>
+        <p class="body-16">When you open the website, the server automatically processes technical data that your browser sends, in particular your IP address, the date and time of the request, the requested page, the browser and operating system. This is necessary to deliver the website and to keep it secure. The legal basis is Art. 6 (1) (f) GDPR; my legitimate interest is the secure and reliable delivery of this website. GitHub may process this data in the USA. Details are in GitHub's privacy statement:</p>
+        <p class="body-16"><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a></p>
+        <h2 class="display-24 legal-h">Local storage in your browser</h2>
+        <p class="body-16">If you switch the language to German, this choice is saved in your browser's local storage (key "ns-lang") so that the website remembers it on your next visit. This value stays on your device and is never sent to me or to anyone else. You can delete it at any time in your browser settings. The legal basis is § 25 (2) No. 2 TDDDG, as storing the choice is necessary for the function you requested.</p>
+        <h2 class="display-24 legal-h">External links</h2>
+        <p class="body-16">This website links to my LinkedIn profile. LinkedIn only receives data once you click the link and leave this website. From then on, LinkedIn's privacy policy applies.</p>
+        <h2 class="display-24 legal-h">Contact by email</h2>
+        <p class="body-16">If you write me an email, I process your email address and the content of your message only to answer your request. The legal basis is Art. 6 (1) (b) or (f) GDPR. I delete the data once it is no longer needed.</p>
+        <h2 class="display-24 legal-h">Your rights</h2>
+        <p class="body-16">You have the right to access, rectification, erasure and restriction of processing of your personal data, the right to data portability and the right to object to processing based on Art. 6 (1) (f) GDPR. To exercise these rights, send me an email.</p>
+        <p class="body-16">You also have the right to lodge a complaint with a data protection supervisory authority, for example the State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia (LDI NRW).</p>
+        <p class="body-16">Last updated: October 2026</p>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="wrap site-foot" data-surface="dark">
   <div class="foot-row mono-12">
     <span>© 2026 Nico Soballa</span>
-    <nav class="foot-nav" aria-label="Footer"><a href="#portfolio">Portfolio</a><a href="#personal-information">Personal Information</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="#disclaimer">Disclaimer</a></nav>
+    <nav class="foot-nav" aria-label="Footer"><a href="#portfolio">Portfolio</a><a href="#personal-information">Personal Information</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="#disclaimer">Disclaimer</a><a href="#impressum">Impressum</a><a href="#privacy">Privacy</a></nav>
     <a href="#top" id="to-top">Back to top</a>
   </div>
 </footer>
@@ -1593,7 +1669,7 @@ document.addEventListener('click', function (e) {
   var a = e.target && e.target.closest ? e.target.closest('.ns-nav, .foot-nav a') : null;
   if (a && current && a.getAttribute('href') === '#' + current) setTimeout(toTop, 0);
 });
-var VIEWS = ['portfolio', 'personal-information', 'skills', 'contact', 'disclaimer'], current = null;
+var VIEWS = ['portfolio', 'personal-information', 'skills', 'contact', 'disclaimer', 'impressum', 'privacy'], current = null;
 function show(v, anchor) {
   if (VIEWS.indexOf(v) < 0) v = 'portfolio';
   if (v !== current) {
@@ -1601,7 +1677,7 @@ function show(v, anchor) {
     current = v;
     trail.clear();
     $$('.ns-nav, .foot-nav a').forEach(function (a) { if (a.getAttribute('href') === '#' + v) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    var pi = $('#page-icon'), names = { 'portfolio': ['book', 'Portfolio'], 'personal-information': ['person', 'Personal Information'], 'skills': ['bars', 'Skills'], 'contact': ['mail', 'Contact'], 'disclaimer': ['eye', 'Disclaimer'] };
+    var pi = $('#page-icon'), names = { 'portfolio': ['book', 'Portfolio'], 'personal-information': ['person', 'Personal Information'], 'skills': ['bars', 'Skills'], 'contact': ['mail', 'Contact'], 'disclaimer': ['eye', 'Disclaimer'], 'impressum': ['person', 'Impressum'], 'privacy': ['eye', 'Privacy'] };
     if (pi && names[v]) {
       pi.setAttribute('aria-label', 'Current page: ' + names[v][1]);
       pi.classList.add('is-swap');
@@ -1956,6 +2032,33 @@ function rearmAppear() { if (!appearIO) return; appearFrames.forEach(function (f
 })();
 /* German texts, keyed by the English original */
 var DE = {
+  "Privacy": "Datenschutz",
+  "Current page: Impressum": "Aktuelle Seite: Impressum",
+  "Current page: Privacy": "Aktuelle Seite: Datenschutz",
+  "Germany": "Deutschland",
+  "Information according to § 5 DDG": "Angaben gemäß § 5 DDG",
+  "Email:": "E-Mail:",
+  "Responsible for the content according to § 18 (2) MStV": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+  "Consumer dispute resolution": "Verbraucherstreitbeilegung",
+  "I am neither willing nor obliged to take part in dispute resolution proceedings before a consumer arbitration board.": "Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+  "Liability for links": "Haftung für Links",
+  "This website links to external websites (LinkedIn). I have no influence on their content, and the respective provider is responsible for it. If I become aware of any infringement, I will remove the link immediately.": "Diese Website enthält Links zu externen Websites (LinkedIn). Auf deren Inhalte habe ich keinen Einfluss; verantwortlich ist der jeweilige Anbieter. Werden mir Rechtsverletzungen bekannt, entferne ich den Link umgehend.",
+  "Controller": "Verantwortlicher",
+  "Overview": "Überblick",
+  "This website is a personal portfolio. It uses no cookies, no analytics, no tracking and no advertising, and it has no contact form. Fonts are hosted on this website itself, so no data is sent to font providers.": "Diese Website ist ein persönliches Portfolio. Sie verwendet keine Cookies, keine Analyse-Tools, kein Tracking und keine Werbung und hat kein Kontaktformular. Die Schriften liegen auf dieser Website selbst, es werden also keine Daten an Schriftanbieter übertragen.",
+  "Hosting and server logs": "Hosting und Server-Logfiles",
+  "This website is hosted on GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.": "Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.",
+  "When you open the website, the server automatically processes technical data that your browser sends, in particular your IP address, the date and time of the request, the requested page, the browser and operating system. This is necessary to deliver the website and to keep it secure. The legal basis is Art. 6 (1) (f) GDPR; my legitimate interest is the secure and reliable delivery of this website. GitHub may process this data in the USA. Details are in GitHub's privacy statement:": "Beim Aufruf der Website verarbeitet der Server automatisch technische Daten, die Ihr Browser übermittelt, insbesondere Ihre IP-Adresse, Datum und Uhrzeit des Abrufs, die aufgerufene Seite, Browser und Betriebssystem. Das ist nötig, um die Website auszuliefern und sicher zu betreiben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO; mein berechtigtes Interesse ist die sichere und zuverlässige Bereitstellung dieser Website. GitHub kann diese Daten in den USA verarbeiten. Einzelheiten stehen in der Datenschutzerklärung von GitHub:",
+  "Local storage in your browser": "Lokaler Speicher in Ihrem Browser",
+  "If you switch the language to German, this choice is saved in your browser's local storage (key \"ns-lang\") so that the website remembers it on your next visit. This value stays on your device and is never sent to me or to anyone else. You can delete it at any time in your browser settings. The legal basis is § 25 (2) No. 2 TDDDG, as storing the choice is necessary for the function you requested.": "Wenn Sie die Sprache auf Deutsch umstellen, wird diese Wahl im lokalen Speicher (Local Storage) Ihres Browsers gespeichert (Schlüssel „ns-lang“), damit die Website sie beim nächsten Besuch kennt. Der Wert bleibt auf Ihrem Gerät und wird weder an mich noch an Dritte übertragen. Sie können ihn jederzeit in den Browsereinstellungen löschen. Rechtsgrundlage ist § 25 Abs. 2 Nr. 2 TDDDG, da die Speicherung für die von Ihnen gewünschte Funktion erforderlich ist.",
+  "External links": "Externe Links",
+  "This website links to my LinkedIn profile. LinkedIn only receives data once you click the link and leave this website. From then on, LinkedIn's privacy policy applies.": "Diese Website verlinkt auf mein LinkedIn-Profil. LinkedIn erhält erst dann Daten, wenn Sie den Link anklicken und diese Website verlassen. Ab dann gilt die Datenschutzerklärung von LinkedIn.",
+  "Contact by email": "Kontakt per E-Mail",
+  "If you write me an email, I process your email address and the content of your message only to answer your request. The legal basis is Art. 6 (1) (b) or (f) GDPR. I delete the data once it is no longer needed.": "Wenn Sie mir eine E-Mail schreiben, verarbeite ich Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht nur, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. f DSGVO. Ich lösche die Daten, sobald sie nicht mehr benötigt werden.",
+  "Your rights": "Ihre Rechte",
+  "You have the right to access, rectification, erasure and restriction of processing of your personal data, the right to data portability and the right to object to processing based on Art. 6 (1) (f) GDPR. To exercise these rights, send me an email.": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer personenbezogenen Daten, das Recht auf Datenübertragbarkeit und das Recht, einer Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO zu widersprechen. Dafür genügt eine E-Mail an mich.",
+  "You also have the right to lodge a complaint with a data protection supervisory authority, for example the State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia (LDI NRW).": "Außerdem haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW).",
+  "Last updated: October 2026": "Stand: Oktober 2026",
   "[meet nico soballa]": "[triff nico soballa]",
   "Portfolio": "Portfolio",
   "Personal Information": "Persönliches",
