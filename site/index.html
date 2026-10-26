@@ -840,11 +840,11 @@ html.landing-on .trail-hint, html.pp-open .trail-hint, html.menu-open .trail-hin
 <div class="pp-stories" hidden>
   <div data-story="p-01">
     <p data-k="team">IFR Dortmund, Dräger, TU Dortmund, WHZ Zwickau, IdF NRW Münster</p>
-    <p data-k="cap1">Firefighter in full breathing apparatus during a smoke test</p>
-    <p data-k="img2" data-src="images/celidon/challenge_px.png" data-resolved="images/celidon/challenge.jpg">Firefighters advancing through flames with almost no visibility</p>
-    <p data-k="img3" data-src="images/celidon/module_px.png" data-resolved="images/celidon/module.jpg">Ultra-wideband localisation module mounted on the protective gear</p>
-    <p data-k="img4" data-src="images/celidon/interface_px.png" data-resolved="images/celidon/interface.jpg">Mask display: team members A, B and C with distances, remaining time, air pressure and unit</p>
-    <p data-k="img5" data-src="images/celidon/fair_px.png" data-resolved="images/celidon/fair.jpg">Presenting the CelidonPRO demonstrator to visitors at a trade fair</p>
+    <p data-k="cap1">Firefighter in full breathing apparatus during a smoke test · Source: IFR</p>
+    <p data-k="img2" data-credit="Source: IFR" data-src="images/celidon/challenge_px.png" data-resolved="images/celidon/challenge.jpg">Firefighters advancing through flames with almost no visibility</p>
+    <p data-k="img3" data-credit="Source: IFR" data-src="images/celidon/module_px.png" data-resolved="images/celidon/module.jpg">Ultra-wideband localisation module mounted on the protective gear</p>
+    <p data-k="img4" data-credit="Source: IFR" data-src="images/celidon/interface_px.png" data-resolved="images/celidon/interface.jpg">Mask display: team members A, B and C with distances, remaining time, air pressure and unit</p>
+    <p data-k="img5" data-credit="Source: IFR" data-src="images/celidon/fair_px.png" data-resolved="images/celidon/fair.jpg">Presenting the CelidonPRO demonstrator to visitors at a trade fair</p>
     <p data-k="lead">CelidonPRO shows firefighters where their team is when smoke takes away everything else. Ultra-wideband modules built into the protective gear locate every crew member without any infrastructure, and a display inside the breathing mask shows direction and distance in real time. I managed the project for the Dortmund Fire Department's Institute for Fire and Rescue Technology, shaped the product and interface design of the demonstrator, and kept the firefighters' needs at the centre of every decision.</p>
     <p data-k="b1">Inside a burning building, visibility can drop to zero within seconds. Crews lose sight of each other, orientation fades, and when someone goes missing nobody knows where to look, while the air in a breathing apparatus lasts only around twenty minutes. Existing tracking relies on beacons or infrastructure that simply isn't there at an unfamiliar fire scene. The task was to build a localisation system that works ad hoc, anywhere, and that firefighters would trust and actually use under stress, in thick gloves and full protective equipment.</p>
     <p data-k="b2">The project brought together Dräger as consortium lead, TU Dortmund, Westsächsische Hochschule Zwickau, the Institut der Feuerwehr NRW in Münster and our institute, funded by the Federal Ministry of Research, Technology and Space. I managed the project in close coordination with all partners, keeping research, engineering and fire service practice aligned. To find out what the product really needed, I planned and facilitated workshops and user tests with firefighters, then turned what we learned into requirements, product concepts and interface designs for the demonstrator.</p>
@@ -1620,7 +1620,7 @@ var trail = (function () {
   return { init: init, clear: clear };
 })();
 var imgIO = ('IntersectionObserver' in window) ? new IntersectionObserver(function (es) {
-  es.forEach(function (e) { var c = e.target._pix; if (!c) return; if (e.isIntersecting) c.resolve(); else c.reset(); });
+  es.forEach(function (e) { var c = e.target._pix; if (!c) return; if (e.isIntersecting) c.resolve(); else if (!e.target._kept) c.reset(); });
 }, { threshold: 0.6 }) : null;
 function initImages(root) {
   $$('canvas[data-src]', root).forEach(function (cv) {
@@ -1629,7 +1629,7 @@ function initImages(root) {
     var c = pixelImage(cv, { src: cv.getAttribute('data-src'), resolvedSrc: cv.getAttribute('data-resolved') || undefined, onLevel: function (l, r) { fig.classList.toggle('is-resolved', r); } });
     cv._pix = c; frame._pix = c;
     if (cv.hasAttribute('data-static')) return;
-    if (touch && imgIO) imgIO.observe(frame);
+    if (touch && imgIO) { imgIO.observe(frame); frame.addEventListener('click', function () { frame._kept = true; c.resolve(); }); }
     else {
       frame.addEventListener('pointerenter', function (e) { if (e.pointerType !== 'touch') c.resolve(); });
       frame.addEventListener('pointerleave', function (e) { if (e.pointerType !== 'touch') c.reset(); });
@@ -1864,7 +1864,7 @@ function openProject(id) {
   var ppHero = $('#pp .pp-hero'); if (ppHero) ppHero.classList.remove('is-resolved');
   ppState.pix = pixelImage(cvp, { src: src.getAttribute('data-pp-src') || src.getAttribute('data-src'), resolvedSrc: src.getAttribute('data-pp-resolved') || src.getAttribute('data-resolved') || undefined, onLevel: function (l, r) { if (ppHero) ppHero.classList.toggle('is-resolved', r); } });
   var fp = $('#pp-frame');
-  fp.onpointerenter = function () { ppState.pix.resolve(); }; fp.onpointerleave = function () { ppState.pix.reset(); };
+  fp.onpointerenter = fp.onclick = function () { ppState.pix.resolve(); }; fp.onpointerleave = function (e) { if (e.pointerType !== 'touch') ppState.pix.reset(); };
   ppState.frame = frame; ppState.busy = true;
   var r = frame.getBoundingClientRect();
   resetForm($('#pp-title'), real ? real.textContent : 'Project ' + no);
@@ -1891,12 +1891,12 @@ function openProject(id) {
     var fig = box.parentNode, fc = $('.pp-fig-cap', fig), credit = d && d.getAttribute('data-credit');
     if (credit) { if (!fc) { fc = document.createElement('figcaption'); fc.className = 'pp-fig-cap mono-12'; fig.appendChild(fc); } fc.textContent = (typeof toLang === 'function') ? toLang(credit) : credit; }
     else if (fc) fc.remove();
-    if (!d) { box.innerHTML = box._orig; box.onpointerenter = box.onpointerleave = null; return; }
+    if (!d) { box.innerHTML = box._orig; box.onpointerenter = box.onpointerleave = box.onclick = null; return; }
     box.innerHTML = '<canvas class="pp-fig-cv" role="img"></canvas>';
     var cv = box.firstChild; cv.setAttribute('aria-label', d.textContent);
     var px = pixelImage(cv, { src: d.getAttribute('data-src'), resolvedSrc: d.getAttribute('data-resolved') || undefined });
     ppState.figs.push(px);
-    box.onpointerenter = function () { px.resolve(); }; box.onpointerleave = function () { px.reset(); };
+    box.onpointerenter = box.onclick = function () { px.resolve(); }; box.onpointerleave = function (e) { if (e.pointerType !== 'touch') px.reset(); };
     setTimeout(function () { px.render(); }, 60);
   });
   var cap = $('#pp .pp-hero .ns-project-name');
@@ -2196,6 +2196,7 @@ var DE = {
   "Copied": "Kopiert",
   /* CelidonPRO */
   "Firefighter in full breathing apparatus during a smoke test": "Feuerwehrmann mit Atemschutz bei einem Rauchversuch",
+  "Firefighter in full breathing apparatus during a smoke test · Source: IFR": "Feuerwehrmann mit Atemschutz bei einem Rauchversuch · Quelle: IFR",
   "Firefighters advancing through flames with almost no visibility": "Feuerwehrleute rücken fast ohne Sicht durch die Flammen vor",
   "Ultra-wideband localisation module mounted on the protective gear": "Ultrabreitband-Ortungsmodul an der Schutzausrüstung",
   "Mask display: team members A, B and C with distances, remaining time, air pressure and unit": "Maskenanzeige: Truppmitglieder A, B und C mit Entfernung, Restzeit, Flaschendruck und Einheit",
@@ -2208,6 +2209,7 @@ var DE = {
   /* BACE HUB */
   "BACE HUB: collect online orders, drop off parcels, take home local products · Source: THE ARC": "BACE HUB: Online-Bestellungen abholen, Pakete abgeben, lokale Produkte mitnehmen · Quelle: THE ARC",
   "Source: THE ARC": "Quelle: THE ARC",
+  "Source: IFR": "Quelle: IFR",
   "Source: LEGO": "Quelle: LEGO",
   "Source: Sprenger": "Quelle: Sprenger",
   "The AERO safety stirrup in use · Source: Sprenger": "Der Sicherheitssteigbügel AERO im Einsatz · Quelle: Sprenger",
