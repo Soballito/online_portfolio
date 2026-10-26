@@ -1,0 +1,438 @@
+<div class="landing" id="landing" data-surface="dark" hidden>
+  <button type="button" class="landing-btn" id="landing-btn" aria-label="Meet Nico Soballa. Enter the portfolio"><span class="landing-text" data-form>[meet nico soballa]</span></button>
+</div>
+<canvas class="lt-canvas" id="lt-canvas" aria-hidden="true" hidden></canvas>
+<a class="skip mono-12" href="#main">Skip to content</a>
+
+<button type="button" class="lang-toggle" id="lang-toggle" role="switch" aria-checked="false" aria-label="Language: English"><span class="lg-l lg-en mono-12">ENG</span><span class="tt-track" aria-hidden="true"><svg viewBox="0 0 22 12" width="44" height="24" shape-rendering="crispEdges"><g class="tt-fill"><rect x="4" y="0" width="14" height="1"/><rect x="2" y="1" width="18" height="1"/><rect x="1" y="2" width="20" height="1"/><rect x="1" y="3" width="20" height="1"/><rect x="0" y="4" width="22" height="1"/><rect x="0" y="5" width="22" height="1"/><rect x="0" y="6" width="22" height="1"/><rect x="0" y="7" width="22" height="1"/><rect x="1" y="8" width="20" height="1"/><rect x="1" y="9" width="20" height="1"/><rect x="2" y="10" width="18" height="1"/><rect x="4" y="11" width="14" height="1"/></g><g class="tt-line"><rect x="4" y="0" width="14" height="1"/><rect x="2" y="1" width="2" height="1"/><rect x="18" y="1" width="2" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="20" y="2" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="20" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="21" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="21" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="21" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="21" y="7" width="1" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="1" y="9" width="1" height="1"/><rect x="20" y="9" width="1" height="1"/><rect x="2" y="10" width="2" height="1"/><rect x="18" y="10" width="2" height="1"/><rect x="4" y="11" width="14" height="1"/></g></svg><svg class="tt-knob" viewBox="0 0 12 12" width="24" height="24" shape-rendering="crispEdges"><rect x="4" y="0" width="4" height="1"/><rect x="2" y="1" width="8" height="1"/><rect x="1" y="2" width="10" height="1"/><rect x="1" y="3" width="10" height="1"/><rect x="0" y="4" width="12" height="1"/><rect x="0" y="5" width="12" height="1"/><rect x="0" y="6" width="12" height="1"/><rect x="0" y="7" width="12" height="1"/><rect x="1" y="8" width="10" height="1"/><rect x="1" y="9" width="10" height="1"/><rect x="2" y="10" width="8" height="1"/><rect x="4" y="11" width="4" height="1"/></svg></span><span class="lg-l lg-de mono-12">DEU</span></button>
+<div class="trail-hint" id="trail-hint" role="status" aria-live="polite" hidden><svg class="th-arrow" viewBox="0 0 7 7" width="14" height="14" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="3" y="0" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="3" y="2" width="1" height="1"/><rect x="5" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/></svg><span class="th-text">Need a red thread?</span></div>
+<button type="button" class="trail-toggle" id="trail-toggle" role="switch" aria-checked="false" aria-label="Mouse trail"><svg class="tt-mouse" viewBox="0 0 10 17" width="15" height="25.5" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="0" width="1" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="1" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="2" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="6" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/><rect x="0" y="8" width="1" height="1"/><rect x="8" y="8" width="1" height="1"/><rect x="0" y="9" width="1" height="1"/><rect x="4" y="9" width="1" height="1"/><rect x="5" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/><rect x="7" y="9" width="1" height="1"/><rect x="8" y="9" width="1" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="0" y="10" width="1" height="1"/><rect x="3" y="10" width="1" height="1"/><rect x="4" y="10" width="1" height="1"/><rect x="0" y="11" width="1" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="5" y="11" width="1" height="1"/><rect x="0" y="12" width="1" height="1"/><rect x="1" y="12" width="1" height="1"/><rect x="5" y="12" width="1" height="1"/><rect x="0" y="13" width="1" height="1"/><rect x="6" y="13" width="1" height="1"/><rect x="6" y="14" width="1" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="6" y="16" width="1" height="1"/><rect x="7" y="16" width="1" height="1"/></svg><span class="tt-track" aria-hidden="true"><svg viewBox="0 0 22 12" width="44" height="24" shape-rendering="crispEdges"><g class="tt-fill"><rect x="4" y="0" width="14" height="1"/><rect x="2" y="1" width="18" height="1"/><rect x="1" y="2" width="20" height="1"/><rect x="1" y="3" width="20" height="1"/><rect x="0" y="4" width="22" height="1"/><rect x="0" y="5" width="22" height="1"/><rect x="0" y="6" width="22" height="1"/><rect x="0" y="7" width="22" height="1"/><rect x="1" y="8" width="20" height="1"/><rect x="1" y="9" width="20" height="1"/><rect x="2" y="10" width="18" height="1"/><rect x="4" y="11" width="14" height="1"/></g><g class="tt-line"><rect x="4" y="0" width="14" height="1"/><rect x="2" y="1" width="2" height="1"/><rect x="18" y="1" width="2" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="20" y="2" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="20" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="21" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="21" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="21" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="21" y="7" width="1" height="1"/><rect x="1" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="1" y="9" width="1" height="1"/><rect x="20" y="9" width="1" height="1"/><rect x="2" y="10" width="2" height="1"/><rect x="18" y="10" width="2" height="1"/><rect x="4" y="11" width="14" height="1"/></g></svg><svg class="tt-knob" viewBox="0 0 12 12" width="24" height="24" shape-rendering="crispEdges"><rect x="4" y="0" width="4" height="1"/><rect x="2" y="1" width="8" height="1"/><rect x="1" y="2" width="10" height="1"/><rect x="1" y="3" width="10" height="1"/><rect x="0" y="4" width="12" height="1"/><rect x="0" y="5" width="12" height="1"/><rect x="0" y="6" width="12" height="1"/><rect x="0" y="7" width="12" height="1"/><rect x="1" y="8" width="10" height="1"/><rect x="1" y="9" width="10" height="1"/><rect x="2" y="10" width="8" height="1"/><rect x="4" y="11" width="4" height="1"/></svg></span></button>
+<header class="ns-header ns-header--fixed">
+  <div class="ns-header-bar" id="bar">
+    <button type="button" class="ns-iconbtn" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span data-icon="burger" data-scale="2" id="burger-icon"></span>
+    </button>
+    <a class="ns-wordmark display-16" href="#portfolio">NICO SOBALLA</a>
+    <span class="ns-header-end page-icon" id="page-icon" role="img" aria-label="Current page: Portfolio"><span data-icon="book" data-scale="2"></span></span>
+  </div>
+</header>
+
+<div class="ns-menu-scrim" id="scrim" hidden></div>
+<nav class="ns-menu" id="menu" aria-label="Main" hidden>
+  <ul class="ns-menu-list">
+    <li><a class="ns-nav" href="#portfolio"><span data-icon="book" data-scale="4"></span><span class="ns-nav-label display-32" data-form data-delay="180">Portfolio</span></a></li>
+    <li><a class="ns-nav" href="#personal-information"><span data-icon="person" data-scale="4"></span><span class="ns-nav-label display-32" data-form data-delay="340">Personal Information</span></a></li>
+    <li><a class="ns-nav" href="#skills"><span data-icon="bars" data-scale="4"></span><span class="ns-nav-label display-32" data-form data-delay="500">Skills</span></a></li>
+    <li><a class="ns-nav" href="#contact"><span data-icon="mail" data-scale="4"></span><span class="ns-nav-label display-32" data-form data-delay="660">Contact</span></a></li>
+    <li><a class="ns-nav" href="#disclaimer"><span data-icon="eye" data-scale="4"></span><span class="ns-nav-label display-32" data-form data-delay="820">Disclaimer</span></a></li>
+  </ul>
+</nav>
+
+<main id="main">
+
+<!-- ================= PORTFOLIO (landing) ================= -->
+<section class="view" id="v-portfolio" aria-label="Portfolio">
+  <div class="wrap hero">
+    <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Portfolio</span></div>
+    <h1 class="hero-title hero-title--home"><span class="display-96 hero-name" data-form>Nico Soballa</span><span class="display-32 hero-role" data-form data-delay="300">Mechanical Engineer, Project Manager, Product Designer and creative mind</span></h1>
+    <div class="g12 hero-sub">
+      <p class="body-18 c-intro" data-form="p">Every role has added a tool to my box. I don't pick one, I combine them, and take on every challenge with the creative solution it actually needs, built around the people who will use it.</p>
+    </div>
+    <div class="g12 hero-foot">
+      <a class="scroll mono-12" href="#work"><span data-icon="arrow-down" data-scale="3"></span><span>Scroll · 7 projects</span></a>
+      <p class="mono-12 muted hero-note">Hover an image to resolve it</p>
+    </div>
+  </div>
+
+  <div class="wrap" id="work">
+
+    <article class="g12 proj p1" id="p-01">
+      <figure class="ns-project">
+        <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:4/3" tabindex="0" data-parallax="0.04">
+          <canvas class="ns-project-cv" data-static data-src="images/celidon/hero_px.png" data-resolved="images/celidon/hero.jpg" role="img" aria-label="(Project one): firefighter in breathing apparatus in a smoke-filled room"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/celidon/hero.jpg" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">01</span><span class="ns-project-name"><span class="pname" data-side="left"><span class="pname-alias">(Project one)</span><span class="pname-real" aria-hidden="true">CelidonPRO</span></span></span><span class="ns-project-year">2023–2025</span></figcaption>
+      </figure>
+      <div class="pinfo">
+        <p class="mono-12 muted">01 / Institute for Fire and Rescue Technology</p>
+        <h2 class="display-48 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project one)</span><span class="pname-real" aria-hidden="true">CelidonPRO</span></span></h2>
+        <dl class="pmeta mono-12"><div><dt>Role</dt><dd>Project Manager &amp; Workshop Facilitator</dd></div><div><dt>Year</dt><dd>2023–2025</dd></div></dl>
+        <p class="body-16" data-form="p">A localisation system that shows firefighters where their team is when smoke takes away everything else. I managed the research project across five partners and designed the product and interface of the demonstrator, tested with firefighters in full gear until it worked without explanation.</p>
+        <a class="ns-link mono-14" href="#p-01" data-open="p-01">View project <span data-icon="chevron" data-scale="2"></span></a>
+      </div>
+    </article>
+
+    <article class="g12 proj p2" id="p-02">
+      <figure class="ns-project">
+        <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:4/3" tabindex="0" data-parallax="0.06">
+          <canvas class="ns-project-cv" data-static data-src="images/bace/hero_px.png" data-resolved="images/bace/hero.jpg" role="img" aria-label="(Project two): BACE HUB smart pickup station at an office entrance"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/bace/hero.jpg" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">02</span><span class="ns-project-name"><span class="pname" data-side="left"><span class="pname-alias">(Project two)</span><span class="pname-real" aria-hidden="true">BACE HUB</span></span></span><span class="ns-project-year">2023</span></figcaption>
+      </figure>
+      <div class="pinfo">
+        <p class="mono-12 muted">02 / THE ARC</p>
+        <h2 class="display-48 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project two)</span><span class="pname-real" aria-hidden="true">BACE HUB</span></span></h2>
+        <dl class="pmeta mono-12"><div><dt>Role</dt><dd>Product Design, Product Manager, R&amp;D, Workshop Facilitator</dd></div><div><dt>Year</dt><dd>2023</dd></div></dl>
+        <p class="body-16" data-form="p">A smart pickup station for parcels and local products, opened with a QR code. As part of the founding team I took the hardware from first workshops to manufacturing, built and wired the first hub myself and kept it running at the Westfalenstadion with BVB and GLS.</p>
+        <a class="ns-link mono-14" href="#p-02" data-open="p-02">View project <span data-icon="chevron" data-scale="2"></span></a>
+      </div>
+    </article>
+
+    <article class="g12 proj p3" id="p-03">
+      <div class="pinfo">
+        <p class="mono-12 muted">03 / ABUS</p>
+        <h2 class="display-48 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project three)</span><span class="pname-real" aria-hidden="true">SMART LOCK</span></span></h2>
+        <dl class="pmeta mono-12"><div><dt>Role</dt><dd>Project Manager, R&amp;D, Workshop Facilitator</dd></div><div><dt>Year</dt><dd>2023</dd></div></dl>
+        <p class="body-16" data-form="p">A smart lock for construction sites, explored with ABUS. Workshops, site visits, interviews and fast prototypes showed that the need wasn't there yet, an honest result found early, before anything was built at scale.</p>
+        <a class="ns-link mono-14" href="#p-03" data-open="p-03">View project <span data-icon="chevron" data-scale="2"></span></a>
+      </div>
+      <figure class="ns-project ns-project--bleed-right">
+        <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:3/4" tabindex="0" data-parallax="0.05">
+          <canvas class="ns-project-cv" data-static data-src="images/lock/hero_px.png" data-resolved="images/lock/hero.jpg" role="img" aria-label="(Project three): two padlocks on a construction site container door"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/lock/hero.jpg" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">03</span><span class="ns-project-name"><span class="pname" data-side="left"><span class="pname-alias">(Project three)</span><span class="pname-real" aria-hidden="true">SMART LOCK</span></span></span><span class="ns-project-year">2023</span></figcaption>
+      </figure>
+    </article>
+
+    <article class="g12 proj p4" id="p-04">
+      <figure class="ns-project">
+        <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:4/3" tabindex="0" data-parallax="0.04">
+          <canvas class="ns-project-cv" data-static data-src="images/gas/hero_px.png" data-resolved="images/gas/hero.jpg" role="img" aria-label="(Project four): two handheld exhaust gas analysers compared side by side"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/gas/hero.jpg" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">04</span><span class="ns-project-name"><span class="pname" data-side="left"><span class="pname-alias">(Project four)</span><span class="pname-real" aria-hidden="true">GAS DETECTOR</span></span></span><span class="ns-project-year">2022</span></figcaption>
+      </figure>
+      <div class="pinfo">
+        <p class="mono-12 muted">04 / ECOM</p>
+        <h2 class="display-48 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project four)</span><span class="pname-real" aria-hidden="true">GAS DETECTOR</span></span></h2>
+        <dl class="pmeta mono-12"><div><dt>Role</dt><dd>Project Manager, R&amp;D, Workshop Facilitator</dd></div><div><dt>Year</dt><dd>2022</dd></div></dl>
+        <p class="body-16" data-form="p">A new generation of exhaust gas analysers for ecom. I learned the field from scratch, watched technicians at work, led more than ten prototypes with jojorama and the team behind a new user interface, until the project was shelved for reasons I can't share.</p>
+        <a class="ns-link mono-14" href="#p-04" data-open="p-04">View project <span data-icon="chevron" data-scale="2"></span></a>
+      </div>
+    </article>
+  </div>
+
+  <section class="feature" id="p-05" data-surface="dark" aria-label="(Project five)">
+    <div class="ns-project-frame feature-frame" data-cursor-reveal tabindex="0">
+      <canvas class="ns-project-cv" data-static data-src="images/aero/hero_px.png" data-resolved="images/aero/hero.jpg" role="img" aria-label="(Project five): rider's boot in the AERO safety stirrup"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/aero/hero.jpg" aria-hidden="true"></canvas>
+    </div>
+    <div class="wrap feature-copy">
+      <div class="feature-text">
+        <p class="mono-12">05 / Sprenger / 2021</p>
+        <h2 class="display-64 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project five)</span><span class="pname-real" aria-hidden="true">SAFETY STIRRUP</span></span></h2>
+        <p class="body-16 feature-desc" data-form="p">AERO, a safety stirrup for Sprenger. Its flexible side holds the foot while riding and opens under the pressure of the foot in a fall, so the rider is not dragged along. I developed the safety system as mechanical engineer with jojorama and later managed the project.</p>
+      </div>
+      <a class="ns-btn ns-btn--light mono-14" href="#p-05" data-open="p-05">View project <span data-icon="chevron" data-scale="2"></span></a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="g12 proj pair">
+      <article class="pair-a" id="p-06">
+        <figure class="ns-project">
+          <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:3/4" tabindex="0" data-parallax="0.03">
+            <canvas class="ns-project-cv" data-static data-src="images/lego/card_px.png" data-resolved="images/lego/card.jpg" data-pp-src="images/lego/hero_px.png" data-pp-resolved="images/lego/hero.jpg" role="img" aria-label="(Project six): LEGO MINDSTORMS robot waving on a table"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/lego/card.jpg" aria-hidden="true"></canvas>
+          </div>
+          <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">06</span><span class="ns-project-name"><span class="pname" data-side="left"><span class="pname-alias">(Project six)</span><span class="pname-real" aria-hidden="true">LEGO</span></span></span><span class="ns-project-year">2020–2021</span></figcaption>
+        </figure>
+        <div class="pinfo">
+          <h2 class="display-32 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project six)</span><span class="pname-real" aria-hidden="true">LEGO</span></span></h2>
+          <p class="body-16" data-form="p">From inventing a new prototype every two weeks in LEGO's prototype development department to my master's thesis with LEGO MINDSTORMS: a computer-vision game of rock paper scissors that let children under ten teach a robot their own moves, and sometimes turned into a dance.</p>
+          <a class="ns-link mono-14" href="#p-06" data-open="p-06">View project <span data-icon="chevron" data-scale="2"></span></a>
+        </div>
+      </article>
+      <article class="pair-b" id="p-07">
+        <figure class="ns-project">
+          <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:4/3" tabindex="0" data-parallax="0.06">
+            <canvas class="ns-project-cv" data-static data-src="images/hilti/card_px.png" data-resolved="images/hilti/card.jpg" data-pp-src="images/hilti/hero_px.png" data-pp-resolved="images/hilti/hero.jpg" role="img" aria-label="(Project seven): loading ceiling hangers into the DX 350 pole tool"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/hilti/card.jpg" aria-hidden="true"></canvas>
+          </div>
+          <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">07</span><span class="ns-project-name"><span class="pname" data-side="left"><span class="pname-alias">(Project seven)</span><span class="pname-real" aria-hidden="true">HILTI</span></span></span><span class="ns-project-year">2017–2018</span></figcaption>
+        </figure>
+        <div class="pinfo">
+          <h2 class="display-32 pname-host"><span class="pname" data-side="left"><span class="pname-alias" data-form>(Project seven)</span><span class="pname-real" aria-hidden="true">HILTI</span></span></h2>
+          <p class="body-16" data-form="p">Two projects in HILTI's research and development: a 3D-printed wire magazine that saves ceiling installers from bending down for every hanger, and ten ideas against a failing piston tip, found with slow-motion tests and cross-team workshops.</p>
+          <a class="ns-link mono-14" href="#p-07" data-open="p-07">View project <span data-icon="chevron" data-scale="2"></span></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="block">
+      <div class="ns-section"><span class="ns-section-no mono-12">02</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Index</span></div>
+      <ol class="index">
+        <li><a href="#p-01"><span class="mono-12 muted">01</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project one)</span><span class="pname-real" aria-hidden="true">CelidonPRO</span></span></span><span class="mono-12 i-ctx">Institute for Fire and Rescue Technology</span><span class="mono-12 i-role">Project Manager &amp; Workshop Facilitator</span><span class="mono-12 i-year">2023–2025</span></a></li>
+        <li><a href="#p-02"><span class="mono-12 muted">02</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project two)</span><span class="pname-real" aria-hidden="true">BACE HUB</span></span></span><span class="mono-12 i-ctx">THE ARC</span><span class="mono-12 i-role">Product Design, Product Manager, R&amp;D, Workshop Facilitator</span><span class="mono-12 i-year">2023</span></a></li>
+        <li><a href="#p-03"><span class="mono-12 muted">03</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project three)</span><span class="pname-real" aria-hidden="true">SMART LOCK</span></span></span><span class="mono-12 i-ctx">ABUS</span><span class="mono-12 i-role">Project Manager, R&amp;D, Workshop Facilitator</span><span class="mono-12 i-year">2023</span></a></li>
+        <li><a href="#p-04"><span class="mono-12 muted">04</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project four)</span><span class="pname-real" aria-hidden="true">GAS DETECTOR</span></span></span><span class="mono-12 i-ctx">ECOM</span><span class="mono-12 i-role">Project Manager, R&amp;D, Workshop Facilitator</span><span class="mono-12 i-year">2022</span></a></li>
+        <li><a href="#p-05"><span class="mono-12 muted">05</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project five)</span><span class="pname-real" aria-hidden="true">SAFETY STIRRUP</span></span></span><span class="mono-12 i-ctx">Sprenger</span><span class="mono-12 i-role">Project Manager, Mechanical Engineer, R&amp;D</span><span class="mono-12 i-year">2021</span></a></li>
+        <li><a href="#p-06"><span class="mono-12 muted">06</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project six)</span><span class="pname-real" aria-hidden="true">LEGO</span></span></span><span class="mono-12 i-ctx">LEGO</span><span class="mono-12 i-role">Prototyping Development, R&amp;D, Product Design, Workshop Facilitator</span><span class="mono-12 i-year">2020–2021</span></a></li>
+        <li><a href="#p-07"><span class="mono-12 muted">07</span><span class="display-24"><span class="pname" data-side="left"><span class="pname-alias">(Project seven)</span><span class="pname-real" aria-hidden="true">HILTI</span></span></span><span class="mono-12 i-ctx">HILTI</span><span class="mono-12 i-role">Mechanical Engineer, R&amp;D, Workshop Facilitator</span><span class="mono-12 i-year">2017–2018</span></a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PERSONAL INFORMATION ================= -->
+<section class="view" id="v-personal-information" aria-label="Personal information" hidden>
+  <figure class="ns-project photo-hero">
+    <div class="ns-project-frame photo-frame" data-surface="dark" data-cursor-reveal tabindex="0">
+      <canvas class="ns-project-cv" data-src="images/about/mountain.png" data-static role="img" aria-label="Pixelated black and white photo of a hiker on a mountain path in the Atlas Mountains; the cursor reveals it in colour"></canvas>
+      <canvas class="reveal-cv" data-reveal="images/about/mountain-colour.jpg" aria-hidden="true"></canvas>
+    </div>
+  </figure>
+  <div class="wrap">
+    <div class="g12 about-head">
+      <p class="mono-12 muted c-cap">Atlas Mountains, Morocco</p>
+      <h1 class="display-64 c-title" data-form>Personal Information</h1>
+    </div>
+
+    <div class="block">
+      <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>About</span></div>
+      <div class="g12 prose">
+        <p class="body-18 lead" data-form="p">I'm Nico Soballa, a mechanical engineer and product designer from Dortmund, and an enthusiast for design, innovation and technology. Today I work in the Innovation – Smart City team at the Economic Development Agency of the City of Dortmund.</p>
+        <p class="body-16" data-form="p">I studied mechanical engineering at RWTH Aachen University, where I earned my Bachelor of Science, then moved to Denmark for a Master of Science in IT Product Design at SDU Kolding, which I completed with distinction. Since then I have gathered more than five years of experience between engineering, design and project management: in research and development at HILTI, in prototype development at LEGO, as a product design engineer at THE ARC and as a research associate at the Institute for Fire and Rescue Technology in Dortmund.</p>
+        <p class="body-16" data-form="p">Whatever the project, I focus on the people behind it: the ones who use a product, build it or depend on it. I am communicative, creative and confident, and when a project needs something I don't know yet, I teach it to myself. Outside of work I am always on the lookout for new adventures and hopelessly addicted to sport, from surfing, skating and snowboarding to CrossFit and pretty much everything else.</p>
+      </div>
+    </div>
+
+    <div class="g12 about-images">
+      <figure class="ns-project ai-a">
+        <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:4/3" tabindex="0" data-parallax="0.04">
+          <canvas class="ns-project-cv" data-static data-src="images/about/surf_px.png" data-resolved="images/about/surf.jpg" role="img" aria-label="Nico walking out of the sea with a surfboard, giving a thumbs-up"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/about/surf.jpg" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">A</span><span class="ns-project-name">Surfing in Portugal</span><span class="ns-project-year">© Agnieszka Pokrywka</span></figcaption>
+      </figure>
+      <figure class="ns-project ai-b">
+        <div class="ns-project-frame" data-cursor-reveal data-surface="dark" style="aspect-ratio:3/4" tabindex="0" data-parallax="0.07">
+          <canvas class="ns-project-cv" data-static data-src="images/about/portugal_px.png" data-resolved="images/about/portugal.jpg" role="img" aria-label="Nico in a red cap on a sunny hiking path in Portugal"></canvas>
+          <canvas class="reveal-cv" data-reveal="images/about/portugal.jpg" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">B</span><span class="ns-project-name">On the trail in Portugal</span><span class="ns-project-year"></span></figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <div class="ns-section"><span class="ns-section-no mono-12">02</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Quick facts</span></div>
+      <div class="g12">
+        <dl class="ns-facts c-facts">
+          <div class="ns-fact"><dt class="mono-12">Location</dt><dd class="body-16">Dortmund, Germany</dd></div>
+          <div class="ns-fact"><dt class="mono-12">Languages</dt><dd class="body-16">German, English, Polish · some French · just started Japanese</dd></div>
+          <div class="ns-fact"><dt class="mono-12">Education</dt><dd class="body-16">M.Sc. IT Product Design, SDU Kolding, with distinction<br>B.Sc. Mechanical Engineering, RWTH Aachen University</dd></div>
+          <div class="ns-fact"><dt class="mono-12">Experience</dt><dd class="body-16">5+ years in product development, design and project management</dd></div>
+          <div class="ns-fact"><dt class="mono-12">Available</dt><dd class="body-16">From April 2027</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="ns-section"><span class="ns-section-no mono-12">03</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Approach</span></div>
+      <div class="g12 trio">
+        <div><p class="mono-12 label"><i class="ns-section-mark"></i>Kindness first</p><p class="body-16" data-form="p">Good work comes from people who treat each other well. Respect, openness and a friendly word make every team faster and every result better.</p></div>
+        <div><p class="mono-12 label"><i class="ns-section-mark"></i>Prototype early, fail fast</p><p class="body-16" data-form="p">A rough prototype in real hands teaches more than months of planning, and every early mistake saves time in the long run.</p></div>
+        <div><p class="mono-12 label"><i class="ns-section-mark"></i>Connect the disciplines</p><p class="body-16" data-form="p">The best ideas happen where fields meet. Bring together people with different backgrounds and their combined knowledge turns into real innovation.</p></div>
+      </div>
+      <div class="g12 next"><a class="ns-link mono-14 c-next" href="#skills">See skills <span data-icon="chevron" data-scale="2"></span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="view" id="v-skills" aria-label="Skills" hidden>
+  <div class="wrap hero">
+    <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Skills</span></div>
+    <h1 class="display-96 hero-title" data-form>Skills</h1>
+    <div class="g12 hero-sub">
+      <p class="body-18 c-intro" data-form="p">Sketching, research, prototypes and people: each skill sharpens the others. Together they let me go from a first conversation to a tested solution, with curiosity as the engine behind all of it.</p>
+    </div>
+  </div>
+
+  <div class="wrap" id="skill-list"></div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="view" id="v-contact" aria-label="Contact" hidden>
+  <div class="wrap hero">
+    <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Contact</span></div>
+    <h1 class="display-96 hero-title" data-form>Say hello</h1>
+    <div class="g12 hero-sub">
+      <p class="body-18 c-intro" data-form="p">Feel free to reach out on LinkedIn or through any of the contact details in my application. I am really looking forward to meeting you.</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="contacts">
+      <a class="ns-contact" href="https://www.linkedin.com/in/nico-soballa" target="_blank" rel="noopener"><span data-icon="person" data-scale="3"></span><span class="ns-contact-label display-24">LinkedIn</span><span class="ns-contact-value mono-14">linkedin.com/in/nico-soballa</span><span data-icon="chevron" data-scale="3"></span></a>
+    </div>
+  </div>
+
+  <section class="closing" data-surface="dark" aria-label="Closing">
+    <div class="wrap">
+      <p class="display-96 closing-line" data-form>Let's make something</p>
+    </div>
+  </section>
+</section>
+
+
+<!-- project page texts: one block per project; fields not given here fall back to the placeholders -->
+<div class="pp-stories" hidden>
+  <div data-story="p-01">
+    <p data-k="team">IFR Dortmund, Dräger, TU Dortmund, WHZ Zwickau, IdF NRW Münster</p>
+    <p data-k="cap1">Firefighter in full breathing apparatus during a smoke test</p>
+    <p data-k="img2" data-src="images/celidon/challenge_px.png" data-resolved="images/celidon/challenge.jpg">Firefighters advancing through flames with almost no visibility</p>
+    <p data-k="img3" data-src="images/celidon/module_px.png" data-resolved="images/celidon/module.jpg">Ultra-wideband localisation module mounted on the protective gear</p>
+    <p data-k="img4" data-src="images/celidon/interface_px.png" data-resolved="images/celidon/interface.jpg">Mask display: team members A, B and C with distances, remaining time, air pressure and unit</p>
+    <p data-k="img5" data-src="images/celidon/fair_px.png" data-resolved="images/celidon/fair.jpg">Presenting the CelidonPRO demonstrator to visitors at a trade fair</p>
+    <p data-k="lead">CelidonPRO shows firefighters where their team is when smoke takes away everything else. Ultra-wideband modules built into the protective gear locate every crew member without any infrastructure, and a display inside the breathing mask shows direction and distance in real time. I managed the project for the Dortmund Fire Department's Institute for Fire and Rescue Technology, shaped the product and interface design of the demonstrator, and kept the firefighters' needs at the centre of every decision.</p>
+    <p data-k="b1">Inside a burning building, visibility can drop to zero within seconds. Crews lose sight of each other, orientation fades, and when someone goes missing nobody knows where to look, while the air in a breathing apparatus lasts only around twenty minutes. Existing tracking relies on beacons or infrastructure that simply isn't there at an unfamiliar fire scene. The task was to build a localisation system that works ad hoc, anywhere, and that firefighters would trust and actually use under stress, in thick gloves and full protective equipment.</p>
+    <p data-k="b2">The project brought together Dräger as consortium lead, TU Dortmund, Westsächsische Hochschule Zwickau, the Institut der Feuerwehr NRW in Münster and our institute, funded by the Federal Ministry of Research, Technology and Space. I managed the project in close coordination with all partners, keeping research, engineering and fire service practice aligned. To find out what the product really needed, I planned and facilitated workshops and user tests with firefighters, then turned what we learned into requirements, product concepts and interface designs for the demonstrator.</p>
+    <p data-k="b3">The interface had to say a lot with almost nothing. In the mask display every element competes with the firefighter's real view, so we reduced it to what matters in the moment: where my team members are, how far away, and in which direction. Each iteration went back to the people who would wear it, tested in full gear and low visibility, until the design worked without explanation.</p>
+    <p data-k="b4">The project closed with a live demonstration of the integrated system under realistic operating conditions: firefighters in full gear, zero visibility, and their crew's positions visible inside the mask. Along the way I presented the project and its results at trade fairs, showing how research becomes equipment that firefighters actually want to use.</p>
+  </div>
+  <div data-story="p-02">
+    <p data-k="team">THE ARC, NOTO DESIGN, GECK, BVB, GLS</p>
+    <p data-k="cap1">BACE HUB: collect online orders, drop off parcels, take home local products · Source: THE ARC</p>
+    <p data-k="img2" data-credit="Source: THE ARC" data-src="images/bace/stadium_px.png" data-resolved="images/bace/stadium.jpg">The first BACE HUB at the Westfalenstadion, running a BVB × GLS raffle on its screen</p>
+    <p data-k="img3" data-credit="Source: THE ARC" data-src="images/bace/workshop_px.png" data-resolved="images/bace/workshop.jpg">Ideation workshop with modelling clay, sticky notes and a lot of questions</p>
+    <p data-k="img4" data-credit="Source: THE ARC" data-src="images/bace/build_px.png" data-resolved="images/bace/build.jpg">Electronic compartment lock, cable routing through the frame and the latch controller</p>
+    <p data-k="img5" data-credit="Source: THE ARC" data-src="images/bace/matchday_px.png" data-resolved="images/bace/matchday.jpg">Match day at the first BACE HUB with GLS and BVB</p>
+    <p data-k="lead">BACE HUB is a smart pickup station: one place to collect online orders, drop off parcels and take home local products, opened with a quick scan of a QR code. I was part of the founding team, and together with one colleague I was responsible for everything hardware: research, design, development and production management, all the way to our first physical hub at the Westfalenstadion in Dortmund, built in cooperation with BVB and GLS.</p>
+    <p data-k="b1">A start-up has no time to spare, and a hub is not a box you simply put down. It needs a licence for its location, a reliable electrical supply and the approval of everyone who owns, runs or uses the space around it. Our first hub stood in front of one of the busiest stadiums in Germany, which meant permits, power connections and a growing circle of stakeholders to coordinate, while the product itself was still being invented.</p>
+    <p data-k="b2">It started with ideas. Together with our partner at the time, NOTO DESIGN, I planned and held workshops to explore what a hub should be, how people would approach it and how it should feel to use. From there I carried the concepts into hardware: researching components, designing the construction and preparing it for production.</p>
+    <p data-k="b3">Then it got physical. I managed the manufacturing at GECK and built, wired and tested the hub myself: an electronic lock in every compartment, cables routed through the frame, and the controller that connects each door to the digital interface. On site at the stadium I was also the handyman who kept it running. It showed me how tightly the physical product, the user interface and the overall feeling belong together: a door that opens a second too late is a user experience problem.</p>
+    <p data-k="b4">The first BACE HUB opened at the Westfalenstadion and met the fans on match days, with a BVB × GLS raffle running on its screen. For me it was a crash course in project and product management and in how hardware products are really developed, from the first idea to a working station in public space.</p>
+  </div>
+  <div data-story="p-03">
+    <p data-k="team">ABUS, THE ARC</p>
+    <p data-k="cap1">Two padlocks on one container door: everyday access control on a construction site</p>
+    <p data-k="img2" data-src="images/lock/keys_px.png" data-resolved="images/lock/keys.jpg">Key cabinets, chains and padlocks: how access is managed on construction sites today</p>
+    <p data-k="img3" data-src="images/lock/board_px.png" data-resolved="images/lock/board.jpg">Workshop board with use cases from the site visits, from containers to key cabinets</p>
+    <p data-k="img4" data-src="images/lock/prototype_px.png" data-resolved="images/lock/prototype.jpg">On-site research in a building under construction, and an early smart lock prototype kit</p>
+    <p data-k="img5" data-src="images/lock/fair_px.png" data-resolved="images/lock/fair.jpg">The fair stand presenting the ABUS smart lock system</p>
+    <p data-k="lead">SMART LOCK began with a question from ABUS: what could a smart lock solution for construction sites look like? I managed the project on behalf of THE ARC, from the first workshops with the ABUS team to research on real construction sites, interviews, prototype tests and a physical trade fair stand presenting the ABUS smart lock system.</p>
+    <p data-k="b1">Construction sites are tough on products and on people. Many trades share one site, equipment and access change hands every day, and every key handed out is one more to keep track of. ABUS approached us with the idea of a smart lock solution for exactly this environment. The real question behind the brief was whether the people on site actually needed it, and what it would have to be for them to use it.</p>
+    <p data-k="b2">I prepared and facilitated workshops with the ABUS team to shape the idea and make our assumptions visible. Then I went where the product would live: onto construction sites, for product research, interviews and hands-on experience. I designed and ran prototype tests with the people who would use such a system every day, and co-created a physical fair stand to present the ABUS smart lock system.</p>
+    <p data-k="b3">My motto: prototype quickly to find out whether you are on the right track. I would rather put a rough prototype into someone's hands on site than develop something for months and publish it without ever talking to the real customers. Watching how people actually work often shows that what they wanted is far simpler than your idea.</p>
+    <p data-k="b4">The biggest learning: not every project has to end in a product to be worth it. The on-site research, interviews and prototype tests showed that the need for such a product on construction sites was not there yet. ABUS still uses smart locks, but the construction sector is currently no longer one of its main target groups. Finding that out early, before building at scale, is exactly what research is for.</p>
+  </div>
+  <div data-story="p-04">
+    <p data-k="team">THE ARC, jojorama, ecom</p>
+    <p data-k="cap1">An ecom analyser next to a competitor's device: comparing interfaces and handling</p>
+    <p data-k="img2" data-src="images/gas/board_px.png" data-resolved="images/gas/board.jpg">Getting into the technology: an opened-up measuring device at ecom</p>
+    <p data-k="img3" data-src="images/gas/bag_px.png" data-resolved="images/gas/bag.jpg">How the devices travel: an analyser in its transport bag</p>
+    <p data-k="img4" data-src="images/gas/interfaces_px.png" data-resolved="images/gas/interfaces.jpg">Interfaces in the field today: a competitor's menu and an ecom measurement screen</p>
+    <p data-k="img5" data-src="images/gas/lineup_px.png" data-resolved="images/gas/lineup.jpg">Current ecom analysers lined up on a workshop trolley</p>
+    <p data-k="lead">GAS DETECTOR was a product development project for ecom, a manufacturer of exhaust gas analysers and measuring technology from Iserlohn, whose devices are used by heating technicians and chimney sweeps. I managed the project on behalf of THE ARC: from working my way into gas measurement and its market, through interviews and observations with users, to more than ten prototypes with the Hannover design team jojorama and a new user interface for ecom.</p>
+    <p data-k="b1">Gas measurement was new to me, so the first job was to learn it properly: how the devices work, what they have to measure, and how the market around ecom and its competitors is structured. A good device here is not only accurate. It has to fit into the working day of people who carry it from one heating system to the next and use it in cramped, dusty corners.</p>
+    <p data-k="b2">I facilitated interviews with customers and watched them work with ecom devices and with products from other manufacturers. I observed the interaction, the handling and the whole product system around it: where the devices are kept, how they are transported and in which environments they are used. Together with jojorama, a design team based in Hannover, we turned these insights into more than ten prototypes and narrowed them down to a few through user tests with 3D-printed models.</p>
+    <p data-k="b3">I also led the team that developed the new user interface for ecom. On a device that is held in one hand in the middle of a job, every menu level and every button press counts, so the interface had to follow the way technicians actually work rather than the structure of the software behind it. The prototypes and detailed concepts remain confidential, which is why this page shows the research rather than the results.</p>
+    <p data-k="b4">For reasons I am not allowed to talk about, the project was stopped and all the work went into ecom's shelves. What stayed with me is this: at any point in a project, something can happen that overturns all the ideas and implementation you have discussed for so long, and sometimes it all depends on a single person.</p>
+  </div>
+  <div data-story="p-05">
+    <p data-k="team">THE ARC, jojorama, Sprenger</p>
+    <p data-k="cap1">The AERO safety stirrup in use · Source: Sprenger</p>
+    <p data-k="img2" data-credit="Source: Sprenger" data-src="images/aero/release_px.png" data-resolved="images/aero/release.jpg">The flexible side element opens under the pressure of the foot</p>
+    <p data-k="img3" data-credit="Source: Sprenger" data-src="images/aero/product_px.png" data-resolved="images/aero/product.jpg">AERO in Sprenger's design language: anodised aluminium and a black flexible side</p>
+    <p data-k="img4" data-credit="Source: Sprenger" data-src="images/aero/mechanism_px.png" data-resolved="images/aero/mechanism.jpg">Tread with optional stainless steel spikes, and how the side element opens</p>
+    <p data-k="img5" data-credit="Source: Sprenger" data-src="images/aero/riding_px.png" data-resolved="images/aero/riding.jpg">AERO in the saddle</p>
+    <p data-k="lead">AERO is a safety stirrup by Sprenger. One side of the stirrup is a flexible element that keeps the foot in place while riding but opens under the pressure of the foot in a fall, so the rider is not dragged along. It was one of my first projects at THE ARC: I joined as the mechanical engineer, developing the safety system together with the design studio jojorama, and after a few months I also took on the role of project manager.</p>
+    <p data-k="b1">A fall from a horse is dangerous enough. It becomes far worse when a foot stays caught in the stirrup and the rider is dragged. The task was a release system that holds the foot securely in every riding situation, yet frees it reliably in the moment it matters, and that fits the precise, high-quality design language of a manufacturer like Sprenger.</p>
+    <p data-k="b2">We started with research on existing safety systems and on Sprenger itself: its mentality, its products and its visual design language. Together with jojorama we built prototypes to test our ideas, and because the Sprenger team includes passionate riders, we could do our prototype testing right on site.</p>
+    <p data-k="b3">The result is a stirrup in anodised aluminium with a movable side element that lets the foot release sideways, upwards, forwards or backwards. An extra-wide tread with optional stainless steel spikes gives grip, and a 5° incline supports the rider's leg position. My part as the mechanical engineer was the safety system: making the release work reliably while the stirrup stays strong and stable in everyday riding.</p>
+    <p data-k="b4">AERO is now on the market. For me it was the perfect example of how well three different stakeholders, Sprenger, jojorama and THE ARC, can work together: creatively, proactively and with a close eye on time management.</p>
+  </div>
+  <div data-story="p-06">
+    <p data-k="team">LEGO, LEGO MINDSTORMS team</p>
+    <p data-k="nofigs"></p>
+    <p data-k="cap1">A LEGO MINDSTORMS robot, the kind that played rock paper scissors with the children · Source: LEGO</p>
+    <p data-k="lead">At LEGO I started as an intern in the prototype development department, where every two weeks brought a new topic to ideate on and new prototypes to build and present to the team in charge. That led to my master's thesis with the LEGO MINDSTORMS team: how to implement machine learning into the LEGO MINDSTORMS environment, with a focus on the use of computer vision for children under the age of ten.</p>
+    <p data-k="b1">Machine learning usually hides behind data sets, code and abstract logic, far away from how children under ten play and learn. The question was how to make it tangible for them: a way into machine learning and programming that works through what they already have, their bodies, their play and their imagination.</p>
+    <p data-k="b2">During my time in the prototype development department, a new topic every two weeks taught me to ideate fast, build quickly and present prototypes to the people responsible for each topic. For my master's thesis on machine learning and computer vision in LEGO MINDSTORMS, I created a tool that used computer vision to recognise children's movements for rock, paper and scissors, and connected it to a LEGO MINDSTORMS robot that played against them.</p>
+    <p data-k="b3">First the children recorded their own movement for rock, paper and scissors, training the model themselves and discovering how a machine learns from examples. Then they pressed play and a real game began: the robot answered with a random choice, celebrated when it won and cried when it lost. What started as a game of rock paper scissors sometimes turned into a dancing session with the robot.</p>
+    <p data-k="b4">The thesis was a success, and I continued to work for LEGO for a while to bring what I had learned into the LEGO MINDSTORMS world. It taught me far more than coding and machine learning: especially with children, the result can differ widely from what you expect, and human–computer interaction is deeply individual, depending not only on age but on the person.</p>
+  </div>
+  <div data-story="p-07">
+    <p data-k="team">HILTI</p>
+    <p data-k="cap1">Loading ceiling hangers into the DX 350 pole tool, one wire at a time</p>
+    <p data-k="img2" data-src="images/hilti/ceiling_px.png" data-resolved="images/hilti/ceiling.jpg">Setting ceiling hangers with the DX 350 pole tool in the test rig</p>
+    <p data-k="img3" data-src="images/hilti/magazine_px.png" data-resolved="images/hilti/magazine.jpg">The 3D-printed wire magazine on the pole</p>
+    <p data-k="img4" data-src="images/hilti/piston_px.png" data-resolved="images/hilti/piston.jpg">High-speed recording at 100,000 fps of a fastening into concrete, and a worn piston tip</p>
+    <p data-k="img5" data-src="images/hilti/loading_px.png" data-resolved="images/hilti/loading.jpg">Watching how the tool is really handled</p>
+    <p data-k="lead">At HILTI I worked as a mechanical engineer on two projects. The first was to create an accessory for the DX 350 ceiling tool, which fastens hangers with long wires into concrete ceilings. The second was to find solutions for a recurring failure of the piston tip inside HILTI's battery-actuated fastening tools. Both started the same way: with research, interviews and site visits to understand the real problems before touching a solution.</p>
+    <p data-k="b1">For the pole tool I went all the way back to the manufacturing of the ceiling hangers, to understand how they are made, loaded and set into the ceiling with the DX 350. The problem showed itself on site: every hanger comes with a long wire, and loading them one by one meant bending down again and again, hour after hour, a direct path to back pain.</p>
+    <p data-k="b2">The answer was a simple yet helpful invention: a magazine for the wires. Instead of bending down for every single hanger, users could load a few dozen wires at once and then work through them at the ceiling. I designed it, 3D-printed it and tested it myself in the test rig until it held the wires reliably and fitted the way people actually work with the pole.</p>
+    <p data-k="b3">The piston project was a different kind of detective work. I interviewed the HILTI teams working with the affected tools, then designed and facilitated workshops across departments to find where their problems overlapped. I tested the tools myself and made high-resolution slow-motion recordings to see what really happens in the fraction of a second the piston strikes. From there I developed ten improvement ideas, from changing the temperature during material manufacturing to two-material pistons or a new nail geometry.</p>
+    <p data-k="b4">Both projects gave me a great deal of mechanical engineering knowledge, while always keeping an eye on who uses the tools and how. My biggest takeaway: a common misuse of a tool that seems trivial to use can cause high costs for the updates that follow. Understanding the people behind the tool is part of engineering it.</p>
+  </div>
+</div>
+<canvas class="pt-canvas" id="pt-canvas" aria-hidden="true" hidden></canvas>
+<div class="pp" id="pp" role="dialog" aria-modal="true" aria-labelledby="pp-title" data-surface="dark" hidden>
+  <div class="wrap pp-inner">
+    <div class="pp-top pp-line" data-from="left" style="--d:0ms">
+      <p class="mono-12 pp-dim" id="pp-label" data-form>01 / [Client or context]</p>
+      <button type="button" class="pp-close mono-12" id="pp-close"><span data-icon="close" data-scale="2"></span><span data-form>Close</span></button>
+    </div>
+    <h1 class="display-96 pp-title" id="pp-title" data-form>Project</h1>
+    <dl class="pp-meta mono-12">
+      <div class="pp-line" data-from="both" style="--d:80ms"><dt data-form>Role</dt><dd id="pp-role" data-form>[Your role]</dd></div>
+      <div class="pp-line" data-from="right" style="--d:140ms"><dt data-form>Year</dt><dd id="pp-year" data-form>[Year]</dd></div>
+      <div class="pp-line" data-from="left" style="--d:200ms"><dt data-form>Context</dt><dd id="pp-ctx" data-form>[Client or context]</dd></div>
+      <div class="pp-line" data-from="both" style="--d:260ms"><dt data-form>Team</dt><dd id="pp-team" data-form>[Team size and partners]</dd></div>
+    </dl>
+    <div class="g12 pp-lead-row"><p class="pp-story pp-lead" data-form="p">[Two or three sentences that summarise the project: the brief, your part in it, and the result. Keep it short enough to read at a glance, but specific enough that someone knows exactly what you made and why it matters.]</p></div>
+    <figure class="ns-project pp-hero">
+      <div class="ns-project-frame" id="pp-frame" tabindex="0"><canvas class="ns-project-cv" id="pp-cv" role="img" aria-label="Project image"></canvas></div>
+      <figcaption class="ns-project-cap mono-12"><span class="ns-project-no">01</span><span class="ns-project-name" data-form>[Caption for the main image]</span></figcaption>
+    </figure>
+    <section class="g12 pp-block pp-b1">
+      <p class="mono-12 pp-label pp-line" data-from="left" style="--d:320ms"><i class="ns-section-mark"></i><span data-form>Challenge</span></p>
+      <figure class="pp-ph pp-fig"><div class="pp-ph-box" style="aspect-ratio:16 / 9"><span class="mono-12" data-form>[Project image 02]</span></div></figure>
+      <p class="pp-story" data-form="p">[What problem did the project solve, and for whom? Describe the starting point in plain words: what was broken, missing or too slow, and why it mattered to the people using it. Name the constraints you had to work within, such as budget, materials, regulations or a fixed launch date, and what success was supposed to look like at the start.]</p>
+    </section>
+    <section class="g12 pp-block pp-b2">
+      <p class="mono-12 pp-label pp-line" data-from="right" style="--d:0ms"><i class="ns-section-mark"></i><span data-form>Process</span></p>
+      <figure class="pp-ph pp-fig"><div class="pp-ph-box" style="aspect-ratio:3 / 4"><span class="mono-12" data-form>[Project image 03]</span></div></figure>
+      <p class="pp-story" data-form="p">[How you approached it. Walk through the research, the first concepts and the prototypes that failed before one worked. Mention the engineering or design decisions that shaped the result, the tools you used, and who you worked with. One honest sentence about what you would do differently next time makes this part stronger.]</p>
+    </section>
+    <section class="g12 pp-block pp-b3">
+      <p class="mono-12 pp-label pp-line" data-from="both" style="--d:0ms"><i class="ns-section-mark"></i><span data-form>Details</span></p>
+      <figure class="pp-ph pp-fig"><div class="pp-ph-box" style="aspect-ratio:21 / 9"><span class="mono-12" data-form>[Project image 04]</span></div></figure>
+      <p class="pp-story" data-form="p">[Zoom in on one part you are proud of: a mechanism, a material choice, an interaction or a piece of planning that made the difference. Explain it so someone outside your field understands why it is clever, and use the image above to show it.]</p>
+    </section>
+    <section class="g12 pp-block pp-b4">
+      <p class="mono-12 pp-label pp-line" data-from="left" style="--d:0ms"><i class="ns-section-mark"></i><span data-form>Result</span></p>
+      <figure class="pp-ph pp-fig"><div class="pp-ph-box" style="aspect-ratio:4 / 5"><span class="mono-12" data-form>[Project image 05]</span></div></figure>
+      <p class="pp-story" data-form="p">[What shipped and what it changed. Give one number, quote or before-and-after that shows the impact, then close with what you learned and how it carries into your next project.]</p>
+    </section>
+    <div class="pp-foot"><button type="button" class="ns-btn ns-btn--light mono-14" id="pp-back">Back to portfolio <span data-icon="chevron" data-scale="2"></span></button></div>
+  </div>
+</div>
+<section class="view" id="v-disclaimer" aria-label="Disclaimer" hidden>
+  <div class="wrap hero">
+    <div class="ns-section"><span class="ns-section-no mono-12">01</span><span class="ns-section-label mono-12"><i class="ns-section-mark"></i>Disclaimer</span></div>
+    <h1 class="display-96 hero-title" data-form>Disclaimer</h1>
+  </div>
+  <div class="wrap">
+    <div class="block">
+      <div class="g12 prose">
+        <p class="body-18 lead" data-form="p">This website was created with the assistance of AI, and some of the images were edited with AI.</p>
+        <p class="body-16" data-form="p">All information on it is true and based on the life and work of Nico Soballa.</p>
+        <p class="body-16" data-form="p">If you would like to know more about any topic shown on this website, reach out to Nico Soballa, or even better: invite him to a job interview. You won't regret it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap site-foot" data-surface="dark">
+  <div class="foot-row mono-12">
+    <span>© 2026 Nico Soballa</span>
+    <nav class="foot-nav" aria-label="Footer"><a href="#portfolio">Portfolio</a><a href="#personal-information">Personal Information</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="#disclaimer">Disclaimer</a></nav>
+    <a href="#top" id="to-top">Back to top</a>
+  </div>
+</footer>
